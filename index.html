@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Celebration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" autoplay loop>
+        <source src="love.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Falling Elements -->
+    <div class="falling-container"></div>
+
+    <!-- Page 1: Welcome -->
+    <div class="container show" id="page1">
+        <div class="hearts-container">
+            <div class="heart-box">
+                <div class="heart"></div>
+                <p>Kaustav</p>
+            </div>
+            <div class="heart-box">
+                <div class="heart"></div>
+                <p>Diya</p>
+            </div>
+        </div>
+        <h1>Welcome to Love Story...</h1>
+        <h2>Kaustav & Diya</h2>
+        <p>Celebrating 1st Year</p>
+        <p>April 14, 2024 - April 14, 2025</p>
+        <button onclick="showPage(2)">Begin Our Story</button>
+    </div>
+
+    <!-- Page 2: Love Story Chapter 1 -->
+    <div class="container hidden" id="page2">
+        <h2>✨ Amader Love Story: Ami & Diya ❤</h2>
+        <p>Diya’r jonne eta chhilo dui bochhorer opekkhar shesh, ar amar jonne? Ekta notun journey-r shuru.</p>
+        <p>Se amar dike takiye chilona shudhu, dui bochhor dhore amake bhalobeshe jachhchilo—ekdom nijer moddhe rekhe.</p>
+        <p>Ar tarpor, ekdin se shob shotti kore dilo. Amader golpo ekhon shuru holo...</p>
+        <button onclick="showPage(3)">Next</button>
+    </div>
+
+    <!-- Page 3: Proposal Screenshot -->
+    <div class="container hidden" id="page3">
+        <h2>💌 The Proposal Message</h2>
+        <p>Shei din, Instagram e ekta notification elo. Diya amake propose korechhilo! ❤</p>
+        <img src="proposal_screenshot.jpg" alt="Proposal Screenshot" class="proposal-image">
+        <button onclick="showPage(4)">Next</button>
+    </div>
+
+    <!-- Page 4: Proposal Day -->
+    <div class="container hidden" id="page4">
+        <h2>💌 Propose: April 3/4, 2024</h2>
+        <p>Message ta onno rokom chhilo—random kono text na, ekta pure bhalobashar golpo.</p>
+        <p>She amar kach theke ekta uttor chaichhilo, jeta she onek din dhore opekkha korechhilo.</p>
+        <p>Mone chhilo onek question—"Ki korbo? Ki bolbo?".</p>
+        <button onclick="showPage(5)">Next</button>
+    </div>
+
+    <!-- Page 5: Answer Day -->
+    <div class="container hidden" id="page5">
+        <h2>❤ The Answer: April 14, 2024</h2>
+        <p>Ei 10-11 din er moddhe onek kichu realize korlam. Diya chhilo always there.</p>
+        <p>Se ekta baro part amar life er, ar jodi amra ekshathe thaki, taile seta hote pare amar best decision.</p>
+        <p>Tai April 14 e, ami tar message er reply dilam—"Ami tor proposal ta accept korlam." ❤</p>
+        <p>Sei din o puro excited chhilo, haschhilo, kintu ekta jinis clear chhilo—Amra ekhon shotti shotti ekshathe thakbo.</p>
+        <button onclick="showPage(6)">Next</button>
+    </div>
+
+    <!-- Page 6: Forever & Always -->
+    <div class="container hidden" id="page6">
+        <h2>🌍 Forever & Always</h2>
+        <p>Jibon er future ki hobe ke jane? Kintu ekta jinis sure—amra ekshathe r amra loyal.</p>
+        <p>Ekshathe hobo shobar chhoto chhoto moments ke special banabo.</p>
+        <p>Jeibhabe amra etodin bhalobashar golpo likhchilam, seibhabei likhte thakbo purbo jibonta...</p>
+        <p>Ami tor ar tui amar. Always. ❤</p>
+        <button onclick="showPage(7)">Next</button>
+    </div>
+
+    <!-- Page 7: The Final Page with Images -->
+    <div class="container hidden" id="page7">
+        <h2>Happy Anniversary Baby ✨</h2>
+        <p>Dear Gungun, ei ek bochhorer poth cholai tumi amar jiboner shrestho upohar.</p>
+        <p>Tomar hashi, tomar bhalobasha amar prithibi ke alokito kore. Ei journey shudhu shuru...</p>
+        <p>Eibhabei chirodin amader shathe thako, ek shonge anek anonder golpo likhi.</p>
+        
+        <div class="collage">
+            <img src="image1.jpg" alt="Memory 1">
+            <img src="image2.jpg" alt="Memory 2">
+            <img src="image3.jpg" alt="Memory 3">
+        </div>
+
+        <button onclick="showPage(8)">Next</button>
+    </div>
+
+    <!-- Page 8: "I LOVE YOU BABY" Glowing Text -->
+    <div class="container hidden" id="page8">
+        <h2 class="glow-text">I LOVE YOU GUNGUN BABY ❤️</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

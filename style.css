@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff99cc, #ff6699);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Transitions */
+.container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hearts */
+.hearts-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 20px;
+}
+
+.heart-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Perfect Heart */
+.heart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: rotate(-45deg);
+    margin-bottom: 10px;
+    box-shadow: 0px 10px 30px rgba(255, 0, 0, 0.6);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    left: 50px;
+    top: 0;
+}
+
+/* Buttons */
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #ff6b81, #ff4757);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Falling Elements */
+.falling-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.falling-item {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.9;
+    animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+    from { transform: translateY(-10%); }
+    to { transform: translateY(100vh); }
+}
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.collage img {
+    width: 30%;
+    max-height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+/* Glowing Text */
+.glow-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d, 0 0 30px #ff1a4d;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d; }
+    100% { text-shadow: 0 0 20px #ff1a4d, 0 0 30px #ff1a4d; }
+}
